@@ -10,6 +10,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --tracking-wider: 0.05em;
+    --radius-lg: 0.5rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -190,6 +191,9 @@
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
   .mb-1\.5 {
     margin-bottom: calc(var(--spacing) * 1.5);
   }
@@ -199,8 +203,17 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+  .h-8\.25 {
+    height: calc(var(--spacing) * 8.25);
+  }
+  .h-8\.75 {
+    height: calc(var(--spacing) * 8.75);
   }
   .h-12 {
     height: calc(var(--spacing) * 12);
@@ -235,14 +248,29 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-8\.25 {
+    width: calc(var(--spacing) * 8.25);
+  }
+  .w-8\.75 {
+    width: calc(var(--spacing) * 8.75);
+  }
   .w-15 {
     width: calc(var(--spacing) * 15);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-28 {
     width: calc(var(--spacing) * 28);
@@ -274,6 +302,15 @@
   .w-full {
     width: 100%;
   }
+  .max-w-86 {
+    max-width: calc(var(--spacing) * 86);
+  }
+  .max-w-86\.75 {
+    max-width: calc(var(--spacing) * 86.75);
+  }
+  .max-w-87 {
+    max-width: calc(var(--spacing) * 87);
+  }
   .max-w-\[347px\] {
     max-width: 347px;
   }
@@ -283,8 +320,14 @@
   .min-w-full {
     min-width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -337,6 +380,9 @@
   .rounded-\[15px\] {
     border-radius: 15px;
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -359,6 +405,9 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-1\.5 {
     padding-inline: calc(var(--spacing) * 1.5);
   }
@@ -371,6 +420,9 @@
   .text-\[22px\] {
     font-size: 22px;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .shadow-\[0_4px_30px_rgba\(0\,0\,0\,0\.1\)\] {
     --tw-shadow: 0 4px 30px var(--tw-shadow-color, rgba(0,0,0,0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -378,6 +430,10 @@
   .shadow-\[5px_4px_30px_rgba\(0\,0\,0\,0\.3\)\] {
     --tw-shadow: 5px 4px 30px var(--tw-shadow-color, rgba(0,0,0,0.3));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);
@@ -396,6 +452,11 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .\*\:w-15 {
+    :is(& > *) {
+      width: calc(var(--spacing) * 15);
+    }
   }
   .\*\:w-\[60px\] {
     :is(& > *) {
@@ -595,6 +656,11 @@
   .\[\&\>\*\:not\(\:last-child\)\]\:w-\[20\%\] {
     &>*:not(:last-child) {
       width: 20%;
+    }
+  }
+  .\[\&\>\*\:not\(\:last-child\)\]\:max-w-20 {
+    &>*:not(:last-child) {
+      max-width: calc(var(--spacing) * 20);
     }
   }
   .\[\&\>\*\:not\(\:last-child\)\]\:max-w-\[80px\] {

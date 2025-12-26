@@ -23,7 +23,7 @@
 <body class=" bg-custom-gradient1 font-poppins h-[135vh] *:tracking-wider">
     <div class="container min-w-full h-full flex flex-col items-center justify-between">
         <main
-            class="w-full lg:w-[85%] xl:w-[75%] 2xl:w-[65%] h-[100vh] flex flex-wrap md:flex-nowrap md:flex-row-reverse gap-8 justify-center md:justify-between  md:items-center p-5 ">
+            class="w-full lg:w-[85%] xl:w-[75%] 2xl:w-[65%] h-screen flex flex-wrap md:flex-nowrap md:flex-row-reverse gap-8 justify-center md:justify-between  md:items-center p-5 ">
             <!-- card -->
             <div class="md:w-[40%] lg:w-1/3 md:flex md:justify-end lg:justify-center">
                 <div
@@ -63,17 +63,17 @@
                     <p id="bankName">Pay With Saman Bank</p>
                 </div>
                 <div class="w-full flex gap-2.5 *:hover:scale-115 *:transition *:cursor-pointer">
-                    <div class=" bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
-                        <img src="src/img/bank-saman.png" alt="" class="bankLogo w-[35px] h-[35px]">
+                    <div class=" bg-white w-8.75 h-8.75 rounded-lg flex justify-center items-center">
+                        <img src="src/img/bank-saman.png" alt="" class="bankLogo w-8.75 h-8.75">
                     </div>
-                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
-                        <img src="src/img/bank-mellat.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    <div class="bg-white w-8.75 h-8.75 rounded-lg flex justify-center items-center">
+                        <img src="src/img/bank-mellat.png" alt="" class="bankLogo w-8.25 h-8.25">
                     </div>
-                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
-                        <img src="src/img/bank-pasargad.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    <div class="bg-white w-8.75 h-8.75 rounded-lg flex justify-center items-center">
+                        <img src="src/img/bank-pasargad.png" alt="" class="bankLogo w-8.25 h-8.25">
                     </div>
-                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
-                        <img src="src/img/bank-dey.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    <div class="bg-white w-8.75 h-8.75 rounded-lg flex justify-center items-center">
+                        <img src="src/img/bank-dey.png" alt="" class="bankLogo w-8.25 h-8.25">
                     </div>
                 </div>
                 <div class="w-full">
@@ -81,14 +81,14 @@
                     <div class="flex items-center gap-2">
                         <input type="text" id="inpHolder" data-next="inpNum1" data-target="cardHolder" name="inpHolder"
                             autocomplete="cc-name" placeholder="Yasin Tahmasbi" data-default="Yasin Tahmasbi" required
-                            class="inpText w-[90%] max-w-[347px] h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0 placeholder:text-[14px]">
+                            class="inpText w-[90%] max-w-86.75 h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0 placeholder:text-[14px]">
                         <i class="ri-user-3-line"></i>
                     </div>
                 </div>
                 <div class="w-full">
                     <label for="cardNumber">Card Number</label>
                     <div
-                        class="flex items-center gap-2 *:text-center [&>*:not(:last-child)]:max-w-[80px] [&>*:not(:last-child)]:w-[20%]">
+                        class="flex items-center gap-2 *:text-center [&>*:not(:last-child)]:max-w-20 [&>*:not(:last-child)]:w-[20%]">
                         <input type="text" maxlength="4" id="inpNum1" data-next="inpNum2" data-prv="cardHolder"
                             data-target="cardNum1" placeholder="8888" data-default="****" name="cardNumber"
                             autocomplete="cc-number" required
@@ -108,10 +108,10 @@
                         <i class="ri-bank-card-line"></i>
                     </div>
                 </div>
-                <div class="w-full max-w-[348px] flex justify-start gap-5">
+                <div class="w-full max-w-87 flex justify-start gap-5">
                     <div class="w-1/2 flex flex-col">
                         <p>EXP DATE</p>
-                        <div class="w-full *:w-[60px] *:text-center">
+                        <div class="w-full *:w-15 *:text-center">
                             <input type="text" id="expMonth" data-next="expYear" data-prv="inpNum4" maxlength="2"
                                 data-target="cardMonth" placeholder="YY" data-default="**" autocomplete="cc-exp-month"
                                 required
@@ -128,7 +128,7 @@
                             <input id="cvv" data-next="btnPay" data-prv="expYear" maxlength="4" type="text"
                                 data-target="cardCvv" placeholder="1234" data-default="****" autocomplete="cc-csc"
                                 required
-                                class="inp w-[80px] h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                                class="inp w-20 h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
                         </div>
                     </div>
                 </div>
