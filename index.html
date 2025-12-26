@@ -1,13 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style/output.css">
     <link rel="stylesheet" href="src/style/input.css">
+    <link rel="stylesheet" href="src/remix/remixicon.css">
 </head>
-<body>
-    
+
+<body class="container bg-custom-gradient1 min-w-full font-poppins">
+    <div class="w-full h-screen flex items-center justify-center">
+        <main
+            class="w-full h-full flex flex-wrap gap-8 justify-center p-5 md:w-[70%] md:h-[80%] md:border-white md:border md:rounded-[15px] bg-[rgba(255,255,255,0.2)]">
+            <!-- card -->
+            <div
+                class="w-82 h-51 md:h-[30%] p-5 flex flex-wrap gap-2 border border-[rgba(255,255,255,0.65)] rounded-[15px] bg-[rgba(0,0,0,0.1)] *:items-center *:text-white">
+                <div class="w-full flex justify-between mb-1.5">
+                    <img src="src/img/image1.png" alt="" class="w-8">
+                    <img src="src/img/bank-saman.png" alt="SamanLogo" class="transition cardLogo w-15 h-13">
+                </div>
+                <div class="w-full flex justify-center gap-4">
+                    <p id="cardNum1" class="cardNumber" data-default="****">****</p>
+                    <p id="cardNum2" class="cardNumber" data-default="****">****</p>
+                    <p id="cardNum3" class="cardNumber" data-default="****">****</p>
+                    <p id="cardNum4" class="cardNumber" data-default="****">****</p>
+                </div>
+                <div class="w-full flex flex-wrap justify-center">
+                    <p id="cardHolder">Yasin Tahmasbi</p>
+                </div>
+                <div class="w-full flex justify-between *:text-[14px]">
+                    <div class="w-1/2 flex flex-wrap">
+                        <p class="w-full">EXP DATE</p>
+                        <p id="cardYear" data-default="**">**</p>
+                        <span class="mx-1">/</span>
+                        <p id="cardMonth" data-default="**">**</p>
+                    </div>
+                    <div class="w-1/2 flex flex-wrap justify-end">
+                        <p class="w-full flex justify-end">CVV2</p>
+                        <p id="cardCvv" data-default="****">****</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- detail -->
+            <div
+                class="w-[95%] h-[65%] flex flex-wrap justify-center p-5 border border-[rgba(255,255,255,0.65)] rounded-[15px] bg-[rgba(0,0,0,0.1)] *:text-white">
+                <div class="w-full">
+                    <p id="bankName">Pay With Saman Bank</p>
+                </div>
+                <div class="w-full flex gap-2.5 *:hover:scale-115 *:transition *:cursor-pointer">
+                    <div class=" bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
+                        <img src="src/img/bank-saman.png" alt="" class="bankLogo w-[35px] h-[35px]">
+                    </div>
+                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
+                        <img src="src/img/bank-mellat.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    </div>
+                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
+                        <img src="src/img/bank-pasargad.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    </div>
+                    <div class="bg-white w-[35px] h-[35px] rounded-[8px] flex justify-center items-center">
+                        <img src="src/img/bank-dey.png" alt="" class="bankLogo w-[33px] h-[33px]">
+                    </div>
+                </div>
+                <div class="w-full">
+                    <label for="inpHolder">Card Holder</label>
+                    <div class="flex items-center gap-2">
+                        <input type="text" id="inpHolder" data-next="inpNum1" data-target="cardHolder" name="inpHolder"
+                            autocomplete="cc-name" placeholder="Yasin Tahmasbi" data-default="Yasin Tahmasbi" required
+                            class="inpText w-[90%] max-w-[347px] h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0 placeholder:text-[14px]">
+                        <i class="ri-user-3-line"></i>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <label for="cardNumber">Card Number</label>
+                    <div
+                        class="flex items-center gap-2 *:text-center [&>*:not(:last-child)]:max-w-[80px] [&>*:not(:last-child)]:w-[20%]">
+                        <input type="text" maxlength="4" id="inpNum1" data-next="inpNum2" data-prv="cardHolder"
+                            data-target="cardNum1" placeholder="8888" data-default="****" name="cardNumber"
+                            autocomplete="cc-number" required
+                            class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        <input type="text" maxlength="4" id="inpNum2" data-next="inpNum3" data-prv="inpNum1"
+                            data-target="cardNum2" placeholder="8888" data-default="****" name="cardNumber"
+                            autocomplete="cc-number" required
+                            class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        <input type="text" maxlength="4" id="inpNum3" data-next="inpNum4" data-prv="inpNum2"
+                            data-target="cardNum3" placeholder="8888" data-default="****" name="cardNumber"
+                            autocomplete="cc-number" required
+                            class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        <input type="text" maxlength="4" id="inpNum4" data-next="expMonth" data-prv="inpNum3"
+                            data-target="cardNum4" placeholder="8888" data-default="****" name="cardNumber"
+                            autocomplete="cc-number" required
+                            class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        <i class="ri-bank-card-line"></i>
+                    </div>
+                </div>
+                <div class="w-full flex justify-between gap-5">
+                    <div class="w-1/2 flex flex-col">
+                        <p>EXP DATE</p>
+                        <div class="w-full *:w-[60px] *:text-center">
+                            <input type="text" id="expMonth" data-next="expYear" data-prv="inpNum4" maxlength="2"
+                                data-target="cardMonth" placeholder="YY" data-default="**" autocomplete="cc-exp-month"
+                                required
+                                class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                            <input type="text" id="expYear" data-next="cvv" data-prv="expMonth" maxlength="2"
+                                data-target="cardYear" placeholder="MM" data-default="**" autocomplete="cc-exp-year"
+                                required
+                                class="inp h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        </div>
+                    </div>
+                    <div class="w-1/2 flex flex-col items-end ">
+                        <p class="w-[50%] flex justify-star'">CVV2</p>
+                        <div class="w-[50%] *:text-center">
+                            <input id="cvv" data-next="btnPay" data-prv="expYear" maxlength="4" type="text"
+                                data-target="cardCvv" placeholder="1234" data-default="****" autocomplete="cc-csc"
+                                required
+                                class="inp w-[80px] h-8 px-1.5 bg-[#ffffff28] border border-[#ffffff8e] focus:border-[#ffffff] rounded-[7px] outline-0">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center">
+                    <button id="btnPay"
+                        class="w-[80%] h-12 rounded-[10px] transition outline-0 focus:scale-105 hover:scale-105 bg-amber-400 cursor-pointer">Pay
+                        Now</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
 </body>
+<script src="src/script/main.js"></script>
+
 </html>
