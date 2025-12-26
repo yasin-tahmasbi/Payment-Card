@@ -46,7 +46,7 @@ inpNumber.forEach((inp, i) => {
   });
 });
 
-//  show inp value in card //
+// Update the corresponding card text with the input value, or use default if empty //
 
 targets.forEach((target, i) => {
   target.addEventListener("input", (e) => {
