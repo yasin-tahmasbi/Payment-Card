@@ -2,8 +2,6 @@
 
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @layer utilities {
     .bg-custom-gradient1 {
         background: linear-gradient(180deg,
