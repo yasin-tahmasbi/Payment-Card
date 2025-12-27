@@ -29,5 +29,4 @@ Everything you need is on my website 👇
 
 ## 📷 Preview | Screenshots
 
-![Payment Card UI](src/img/sc1.png)  
-![Responsive View](src/img/sc2.png)
+![Payment Card UI](src/img/sc1.jpg)  
